@@ -1,0 +1,82 @@
+.header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(100deg, #F39BF8 0%, #B092E5 93.85%);
+    &__position-01 {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        max-width: 210px;
+        height: auto;
+    }
+    &__position-02 {
+        position: absolute;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        width: 100%;
+        max-width: 260px;
+        height: auto;
+    }
+    &__position-03 {
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+        z-index: 0;
+        width: 100%;
+        max-width: 529px;
+        height: auto;
+    }
+    &__content {
+        z-index: 5;
+        h1 {
+            margin-bottom: 10px;
+            font-size: 70px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        h2 {
+            font-size: 50px;
+            font-weight: 700;
+            color: #36003F;
+        }
+    }
+    &__wrapper {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__btn {
+        position: relative;
+        max-width: 240px;
+        padding-right: 40px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 11px;
+            background: url("@img/icons/arrow.svg") 50% 50%/cover no-repeat;
+        }
+    }
+    &__btn--second {
+        max-width: 120px;
+    }
+    &__marquee {
+        margin-bottom: 30px;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #FFFFFF;
+    }
+}

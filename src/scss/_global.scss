@@ -1,0 +1,37 @@
+body {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #000000;
+}
+
+[class*="__container"] {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1230px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  max-width: 310px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 20px;
+  color: #000000;
+  transition: opacity 0.2s ease-in;
+  &-yellow {
+    background-color: #F1FF18;
+  }
+  &-pink {
+    background-color: #FED6F9;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
