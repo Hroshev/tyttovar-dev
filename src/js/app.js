@@ -1,3 +1,6 @@
+import burger from "./modules/menu.js"
+
+
 // import popup from "./modules/popup.js"
 // import actionDate from "./modules/action-date.js"
 // import phoneMask from "./modules/phoneMask.js"
