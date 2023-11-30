@@ -1,6 +1,6 @@
 body {
   font-size: 18px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   line-height: 1.2;
   color: #000000;
@@ -11,6 +11,22 @@ body {
   padding: 0 15px;
   width: 100%;
   max-width: 1230px;
+}
+
+[class*="__container-small"] {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 1030px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #36003f;
+  @include phone {
+    font-size: 20px;
+  }
 }
 
 .btn {
@@ -26,12 +42,26 @@ body {
   color: #000000;
   transition: opacity 0.2s ease-in;
   &-yellow {
-    background-color: #F1FF18;
+    background-color: #f1ff18;
   }
   &-pink {
-    background-color: #FED6F9;
+    background-color: #fed6f9;
   }
   &:hover {
     opacity: 0.8;
+  }
+}
+
+.promo {
+  padding: 70px 0px 130px 0px;
+  position: relative;
+  background: linear-gradient(180deg, #FBCCFF 0.25%, #BDB9FF 99.63%);
+  &__position-01 {
+  }
+  &__position-02 {
+  }
+  h2 {
+    margin-bottom: 60px;
+    text-align: center;
   }
 }
