@@ -250,7 +250,7 @@
 .content {
     padding: 100px 0px 150px 0px;
     position: relative;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     @include phone {
         padding: 50px 0px 80px 0px;
     }
@@ -300,9 +300,15 @@
 }
 
 .commercial {
-    padding: 70px 0px;
     position: relative;
-    background: linear-gradient(180deg, rgba(196, 188, 255, 0.00) 0%, #BCB9FF 100%);
+    padding: 70px 0px;
+    background: linear-gradient(180deg, rgba(196, 188, 255, 0) 0%, #bcb9ff 100%);
+    @include tablet {
+        padding: 70px 0px 0px 0px;
+    }
+    @include phone {
+        padding: 50px 0px 0px 0px;
+    }
     h2 {
         margin-bottom: 60px;
         @include tablet {
@@ -352,7 +358,7 @@
     &__bottom {
         padding: 30px;
         border-radius: 10px;
-        background: #FAADF4;
+        background: #faadf4;
         @include tablet {
             margin: 0 auto;
             max-width: 600px;
@@ -388,7 +394,7 @@
                 transform: translateY(-50%);
                 width: 12px;
                 height: 9px;
-                background: url("@img/icons/arrow-2.svg") 50% 50%/cover no-repeat;
+                background: url("@img/icons/arrow-2.svg") 50% 50% / cover no-repeat;
             }
         }
     }
@@ -449,38 +455,215 @@
 .promo {
     padding: 70px 0px 130px 0px;
     position: relative;
-    background: linear-gradient(180deg, #FBCCFF 0.25%, #BDB9FF 99.63%);
+    background: linear-gradient(180deg, #fbccff 0.25%, #bdb9ff 99.63%);
+    @include tablet {
+        padding: 50px 0px;
+    }
     h2 {
         margin-bottom: 60px;
+        position: relative;
+        z-index: 5;
         text-align: center;
+        @include tablet-min {
+            margin-bottom: 40px;
+        }
     }
     &__position-01 {
         position: absolute;
         bottom: 0;
         left: 0;
+        z-index: 1;
+        @include tablet-min {
+            bottom: -100px;
+        }
     }
     &__position-02 {
         position: absolute;
         top: 0;
         right: 0;
+        z-index: 1;
+        @include tablet {
+            top: 180px;
+        }
     }
     &__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        ul {
-            padding: 20px 30px;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 302px));
-            grid-gap: 20px;
-            border-radius: 10px;
-            background-color: #CB96ED;
+        position: relative;
+    }
+    ul {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        max-width: 650px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(302px, 1fr));
+        gap: 30px;
+        @include tablet {
+            margin: 0 auto;
+        }
+        @include tablet-min {
+            max-width: 410px;
+        }
+    }
+    li {
+        padding: 20px 30px;
+        border-radius: 10px;
+        background-color: #cb96ed;
+        text-align: center;
+        h4 {
+            margin: 10px 0px 6px 0px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p {
+            text-align: left;
         }
     }
     &__img--laptop {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        z-index: 1;
         width: 100%;
         max-width: 290px;
         height: auto;
+        @include tablet {
+            display: none;
+        }
+    }
+}
+
+.price {
+    padding: 70px 0px;
+    background: linear-gradient(0deg, rgba(190, 185, 255, 0.00) 0.43%, #BEB9FF 99.65%);
+    @include tablet-min {
+        padding: 50px 0px 35px 0px;
+    }
+    h2 {
+        margin-bottom: 60px;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+        color: #36003F;
+        @include tablet-min {
+            margin: 0px auto 50px auto;
+            max-width: 230px;
+            font-size: 20px;
+            color: #36003F;
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(337px, 1fr));
+        gap: 35px;
+    }
+    &__item {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: #FAADF4;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h3 {
+            margin-bottom: 14px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            @include tablet-min {
+                font-size: 18px;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        li {
+            position: relative;
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            @include tablet-min {
+                font-size: 16px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 9px;
+                background: url("@img/icons/arrow-2.svg") 50% 50%/cover no-repeat;
+            }
+        }
+        p {
+            position: relative;
+            padding: 18px 0px;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            @include tablet-min {
+                font-size: 20px;
+            }
+            &::after {
+                content: "грн";
+                font-size: 20px;
+            }
+        }
+        a {
+            display: inline-block;
+            padding: 18px 8px;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 20px;
+            color: #000000;
+            background-color: #F1FF18;
+            transition: opacity 0.2s ease-in;
+            &:hover {
+              opacity: 0.8;
+            }
+        }
+    }
+    &__close {
+        position: relative;
+        &::after {
+            content: "";
+            background: url("@img/icons/close.svg") 50% 50%/cover no-repeat !important;
+        }
+    }
+}
+
+
+.footer {
+    padding: 50px 0px;
+    background-color: #cb96ed;
+    @include tablet-min {
+        padding: 40px 0px;
+    }
+    &__wrapper {
+        text-align: center;
+    }
+    a {
+        position: relative;
+        padding-right: 50px;
+        font-size: 28px;
+        font-weight: 700;
+        color: #ffffff;
+        @include tablet-min {
+            font-size: 20px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            background: url("@img/icons/telegram.svg") 50% 50% / cover no-repeat;
+        }
     }
 }
