@@ -1,32 +1,16 @@
 import Swiper from "swiper/bundle";
 
-const testimonials = new Swiper(".comment__swipper", {
+const template = new Swiper(".template__swiper", {
   slidesPerView: 1,
-  spaceBetween: 10,
-  grabCursor: true,
+  spaceBetween: 30,
   centeredSlides: true,
-  keyboard: {
-    enabled: true,
+  loop: true,
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
   },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  navigation: {
+    nextEl: '.custom-next',
+    prevEl: '.custom-prev',
   },
-  // breakpoints: {
-  //   760: {
-  //     slidesPerView: 2,
-  //   },
-  //   1004: {
-  //     slidesPerView: 3,
-  //   },
-  // },
 });
-
-// const reviews = new Swiper(".swiper-reviews", {
-//   slidesPerView: 1,
-//   spaceBetween: 20,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });

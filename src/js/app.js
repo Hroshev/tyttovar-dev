@@ -1,4 +1,5 @@
 import burger from "./modules/menu.js"
+import swiper from "./modules/swiper.js"
 
 
 // import popup from "./modules/popup.js"
