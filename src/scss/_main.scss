@@ -480,6 +480,7 @@
     &__img--mobile {
         display: none;
         @include tablet-min {
+            margin: 0 auto;
             display: block;
         }
     }
