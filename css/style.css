@@ -794,6 +794,10 @@ body {
   display: none;
 }
 
+.template__btn {
+  margin-top: 30px;
+}
+
 .template__btn-wrapper {
   position: absolute;
   top: 50%;
@@ -999,6 +1003,10 @@ body {
   text-align: center;
 }
 
+.price__item p span {
+  font-size: 20px;
+}
+
 .price__item p::after {
   content: "грн";
   font-size: 20px;
@@ -1103,11 +1111,11 @@ body {
 
 .benefits__price h3 {
   margin-bottom: 18px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .benefits__price h3 span {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .benefits__price a {
@@ -2011,12 +2019,8 @@ body {
     font-size: 16px;
   }
 
-  .benefits__price h3 {
-    font-size: 18px;
-  }
-
   .benefits__price h3 span {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .features__wrapper {
