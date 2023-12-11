@@ -1,3 +1,4 @@
+import devTools from "./modules/devtools.js"
 import burger from "./modules/menu.js"
 import swiper from "./modules/swiper.js"
 

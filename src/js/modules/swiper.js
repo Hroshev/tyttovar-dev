@@ -6,7 +6,7 @@ const template = new Swiper(".template__swiper", {
   centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 4500,
+    delay: 7000,
     disableOnInteraction: false,
   },
   navigation: {
