@@ -11,13 +11,13 @@ export const images = () => {
 		)
 		
 		//webp изображения + html.js добавить изменения 
-		.pipe(app.plugins.newer(app.path.build.images))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webp()
-			)
-		) 
+		// .pipe(app.plugins.newer(app.path.build.images))
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isBuild,
+		// 		webp()
+		// 	)
+		// ) 
 		
 		.pipe(
 			app.plugins.if(

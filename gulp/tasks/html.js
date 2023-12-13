@@ -23,12 +23,12 @@ export const html = () => {
 		.pipe(app.plugins.replace(/@img\//g, 'img/'))
 
 		//#Создание тега picture вместо img
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				webpHtmlNosvg()
-			)
-		)
+		// .pipe(
+		// 	app.plugins.if(
+		// 		app.isBuild,
+		// 		webpHtmlNosvg()
+		// 	)
+		// )
 		.pipe(
 			app.plugins.if(
 				app.isBuild,

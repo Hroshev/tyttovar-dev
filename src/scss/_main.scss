@@ -124,13 +124,6 @@
             max-width: 240px;
         }
     }
-    &__marquee {
-        margin-bottom: 30px;
-        padding: 10px;
-        font-size: 16px;
-        font-weight: 500;
-        background-color: #ffffff;
-    }
 }
 
 .burger {
@@ -244,6 +237,36 @@
         &:hover {
             color: #36003f;
         }
+    }
+}
+
+.marquee-infinity {
+    padding: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    &--bottom {
+        margin-bottom: 30px;
+    }
+    div {
+        display: flex;
+        width: 300%;
+        animation: marquee-infinity 45s linear infinite;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        white-space: nowrap;
+        width: 100%;
+    }
+}
+
+@keyframes marquee-infinity {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
 
@@ -526,12 +549,6 @@
 
 .custom-next::after {
     background: url("@img/icons/arrow-next.svg") 50% 50%/cover no-repeat;
-}
-
-.adv {
-    &__marquee {
-        padding: 10px 0px 5px 0px;
-    }
 }
 
 .promo {
