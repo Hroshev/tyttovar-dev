@@ -519,14 +519,6 @@ body {
   max-width: 120px;
 }
 
-.header__marquee {
-  margin-bottom: 30px;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  background-color: #ffffff;
-}
-
 .burger {
   position: static;
   padding-top: 20px;
@@ -589,6 +581,57 @@ body {
 
 .menu__link:hover {
   color: #36003f;
+}
+
+.marquee-infinity {
+  padding: 10px;
+  max-width: 100%;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.marquee-infinity--bottom {
+  margin-bottom: 30px;
+}
+
+.marquee-infinity div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+  -webkit-animation: marquee-infinity 45s linear infinite;
+          animation: marquee-infinity 45s linear infinite;
+}
+
+.marquee-infinity p {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  width: 100%;
+}
+
+@-webkit-keyframes marquee-infinity {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-infinity {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .content {
@@ -844,10 +887,6 @@ body {
 
 .custom-next::after {
   background: url("../img/icons/arrow-next.svg") 50% 50%/cover no-repeat;
-}
-
-.adv__marquee {
-  padding: 10px 0px 5px 0px;
 }
 
 .promo {
